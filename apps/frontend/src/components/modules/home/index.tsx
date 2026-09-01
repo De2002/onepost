@@ -22,7 +22,7 @@ export default function HomePage() {
     if (user) {
       setUser(user);
       setIsLoading(false);
-      posthog.identify(user.id, {
+      posthog?.identify(user.id, {
         username: user.username,
       });
     }

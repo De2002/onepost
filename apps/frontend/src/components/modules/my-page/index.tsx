@@ -45,7 +45,7 @@ export default function MyPage({ username }: Readonly<MyPageProps>) {
     if (user) {
       setUser(user);
       setIsUserLoading(false);
-      posthog.identify(user.id, {
+      posthog?.identify(user.id, {
         username: user.username,
       });
     }

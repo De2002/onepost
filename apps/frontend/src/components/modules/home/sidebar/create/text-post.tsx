@@ -28,6 +28,7 @@ const FormSchema = z.object({
   text: z
     .string()
     .min(1, "Post is too short")
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     .max(CONSTANTS.POST.TEXT.MAX_LENGTH, "Post is too long"),
 });
 

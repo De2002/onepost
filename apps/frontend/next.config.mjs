@@ -18,6 +18,7 @@ const cspHeader = `
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
+  transpilePackages: ["@1post/shared", "@1post/client-sdk"],
   images: {
     remotePatterns: [
       {

@@ -179,6 +179,7 @@ export default function CreateVideoPost() {
     isDragAccept,
   } = useDropzone({
     onDrop,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     accept: mimeToExtensions(CONSTANTS.POST.VIDEO_POST.ACCEPTED_MIME_TYPES),
     maxFiles: 1,
     disabled: isDisabled || !!file,
