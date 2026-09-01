@@ -25,6 +25,7 @@ import client from "@/utils/api-client";
 const FormSchema = z.object({
   username: z
     .string()
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     .min(CONSTANTS.USER.USERNAME.MIN_LENGTH, {
       message: `Username must be at least ${CONSTANTS.USER.USERNAME.MIN_LENGTH} characters long`,
     })

@@ -28,7 +28,11 @@ import client from "@/utils/api-client";
 
 const FormSchema = z.object({
   displayName: z.string().optional(),
-  bio: z.string().max(CONSTANTS.USER.BIO.MAX_LENGTH).optional(),
+  bio: z
+    .string()
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    .max(CONSTANTS.USER.BIO.MAX_LENGTH)
+    .optional(),
   url: z
     .string()
     .url()

@@ -111,6 +111,7 @@ export default function CreateImagePost() {
     isDragAccept,
   } = useDropzone({
     onDrop,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     accept: mimeToExtensions(CONSTANTS.POST.IMAGE_POST.ACCEPTED_MIME_TYPES),
     maxFiles: 1,
     disabled: isDisabled || !!file,

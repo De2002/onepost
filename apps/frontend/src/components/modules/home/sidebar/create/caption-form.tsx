@@ -52,6 +52,7 @@ export default function CaptionForm({
 export const CaptionFormSchema = z.object({
   caption: z
     .string()
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     .max(CONSTANTS.POST.POST_MEDIA_CAPTION.MAX_LENGTH, "Caption is too long")
     .optional(),
 });

@@ -184,6 +184,7 @@ export default function CreateAudioPost() {
     isDragAccept,
   } = useDropzone({
     onDrop,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     accept: mimeToExtensions(CONSTANTS.POST.AUDIO_POST.ACCEPTED_MIME_TYPES),
     maxFiles: 1,
     disabled: isDisabled || !!file,

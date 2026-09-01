@@ -43,7 +43,8 @@ const FormSchema = z
   .object({
     description: z
       .string()
-      .max(CONSTANTS.REPORT.DESCRIPTION.MAX_LENGTH)
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    .max(CONSTANTS.REPORT.DESCRIPTION.MAX_LENGTH)
       .optional(),
     reason: z.nativeEnum(ReportReason),
     reportedUserId: z.string(),
