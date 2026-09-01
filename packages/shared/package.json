@@ -4,6 +4,12 @@
   "description": "",
   "author": "Rakesh Potnuru",
   "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
   "scripts": {
     "build": "prisma generate && tsc --build",
     "clean": "rm -rf node_modules && rm -rf dist"
